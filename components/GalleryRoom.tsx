@@ -1,5 +1,6 @@
 import type { GalleryItem } from "@/lib/types";
 import { pitchColor, formatDuration } from "@/lib/palette";
+import { SonictureImage } from "./SonictureImage";
 
 interface Props {
   item: GalleryItem;
@@ -12,11 +13,10 @@ export function GalleryRoom({ item, index }: Props) {
   return (
     <div className="gallery-room" data-index={index}>
       <div className="gallery-image">
-        <img
-          src={`/gallery/${item.slug}/sonicture.png`}
+        <SonictureImage
+          slug={item.slug}
           alt={`Sonicture of '${item.title}' by ${item.artist}`}
-          loading={index === 0 ? "eager" : "lazy"}
-          decoding={index === 0 ? "sync" : "async"}
+          priority={index === 0}
         />
       </div>
 
