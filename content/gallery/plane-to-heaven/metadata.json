@@ -1,0 +1,596 @@
+{
+  "version": "4.9.11-metadata-expand",
+  "audio_file": "/Users/tjd/Library/CloudStorage/GoogleDrive-thomas@dadmun.net/My Drive/claude/sonicture/audio/planeToHeaven.m4a",
+  "processing_time_seconds": 69.07,
+  "audio": {
+    "duration_seconds": 165.91,
+    "sample_rate": 22050,
+    "ending_type": "fade"
+  },
+  "tempo": {
+    "bpm": 76.0,
+    "detection_method": "autocorrelation"
+  },
+  "beats": {
+    "standard": {
+      "detected": 362,
+      "theoretical": 210
+    }
+  },
+  "key": {
+    "estimated": "D major",
+    "confidence": 0.736,
+    "modulation_likely": true
+  },
+  "tuning": {
+    "offset_semitones": 0.05,
+    "a4_hz": 441.27,
+    "correction_applied": true
+  },
+  "dominant_pitches": {
+    "harmony": [
+      "A",
+      "D",
+      "C"
+    ],
+    "bass": [
+      "A",
+      "C",
+      "Bb"
+    ]
+  },
+  "frequency_bands": {
+    "bass": "20-250 Hz",
+    "harmony": "20-5000 Hz",
+    "treble": "2000-8000 Hz"
+  },
+  "palette": "Sonicture OKLCH",
+  "features": {
+    "organic_mode": true,
+    "tree_trunk_gravity": true,
+    "max_drift": 0.21,
+    "electric_tension_wobble": true,
+    "wobble_base_freq": 3.0,
+    "wobble_tension_mod": 12.0,
+    "wobble_density_mod": 1.0,
+    "spike_color_temperature": true,
+    "saturation_boost": 1.15,
+    "spike_expressiveness": true,
+    "lyrics_enabled": true,
+    "svg_export": false,
+    "texture_enabled": true,
+    "texture_scalar": 0.03,
+    "texture_detail_points": 500,
+    "prism_ring_enabled": true,
+    "prism_ring_max_voices": 3,
+    "harmonic_function_enabled": true,
+    "harmonic_function_window": 4.0,
+    "section_detection_enabled": true,
+    "section_gap_multiplier": 2.0,
+    "section_boundaries": [
+      78,
+      113,
+      132,
+      225,
+      265,
+      288,
+      306,
+      327
+    ],
+    "section_count": 9,
+    "continuous_melody_enabled": true,
+    "contour_deviation_degrees": 8,
+    "contour_smoothing": 3
+  },
+  "outputs": [
+    "../output/planeToHeaven/planeToHeaven_v4.9.11-metadata-expand.png"
+  ],
+  "lyrics": {
+    "model": "medium",
+    "confidence_threshold": 0.45,
+    "logprob_threshold": -1.0,
+    "no_speech_threshold": 0.6,
+    "total_words_transcribed": 230,
+    "words_after_filter": 223,
+    "beats_with_lyrics": 178
+  },
+  "narrative_metrics": {
+    "version": "1.1",
+    "dynamics": {
+      "peak_rms_position": 0.868,
+      "peak_rms_db": -7.0,
+      "mean_rms_db": -13.8,
+      "dynamic_range_db": 6.7,
+      "rms_envelope": [
+        0.2689,
+        0.2636,
+        0.2845,
+        0.2689,
+        0.2797,
+        0.2674,
+        0.3148,
+        0.3257,
+        0.4449
+      ]
+    },
+    "tension": {
+      "peak_tension_position": 0.923,
+      "tension_envelope": [
+        0.755,
+        0.636,
+        0.554,
+        0.817,
+        0.867,
+        0.687,
+        0.804,
+        0.532,
+        1.0
+      ],
+      "mean_tension": 0.391
+    },
+    "harmony": {
+      "active_pitch_classes": 6,
+      "pitch_class_distribution": {
+        "C": 0.109,
+        "Db": 0.087,
+        "D": 0.141,
+        "E": 0.061,
+        "F": 0.073,
+        "F#": 0.066,
+        "G": 0.093,
+        "A": 0.204,
+        "Bb": 0.086,
+        "B": 0.034
+      },
+      "per_section_dominant_pitches": [
+        [
+          "A",
+          "D",
+          "C"
+        ],
+        [
+          "A",
+          "D",
+          "C"
+        ],
+        [
+          "D",
+          "F#",
+          "A"
+        ],
+        [
+          "A",
+          "C",
+          "Bb"
+        ],
+        [
+          "A",
+          "D",
+          "C"
+        ],
+        [
+          "D",
+          "A",
+          "C"
+        ],
+        [
+          "A",
+          "Bb",
+          "C"
+        ],
+        [
+          "D",
+          "G",
+          "A"
+        ],
+        [
+          "A",
+          "G",
+          "F"
+        ]
+      ],
+      "per_section_chroma_entropy": [
+        3.32,
+        3.33,
+        3.21,
+        3.32,
+        3.31,
+        3.24,
+        3.18,
+        3.24,
+        3.28
+      ],
+      "harmonic_arc": {
+        "first_half_dominant": [
+          "A",
+          "D"
+        ],
+        "second_half_dominant": [
+          "A",
+          "D"
+        ]
+      },
+      "harmonic_velocity": 0.0438,
+      "max_drift_magnitude": 0.21,
+      "dominant_pitch_classes": [
+        "A",
+        "D",
+        "C",
+        "G",
+        "Db",
+        "Bb",
+        "F",
+        "F#",
+        "E",
+        "B"
+      ],
+      "weighted_center_hex": "#A8BC9B"
+    },
+    "vocal": {
+      "presence_pct": 26.6,
+      "range_semitones": 12.1,
+      "median_midi": 44.7,
+      "range_midi": [
+        38.0,
+        50.1
+      ],
+      "f0_min_hz": 73.4,
+      "f0_max_hz": 147.6,
+      "median_f0_hz": 108.1,
+      "longest_gap_seconds": 5.1,
+      "longest_gap_start": 142.0,
+      "per_section_presence": [
+        0.3,
+        0.16,
+        0.23,
+        0.32,
+        0.18,
+        0.23,
+        0.17,
+        0.28,
+        0.18
+      ]
+    },
+    "rhythm": {
+      "onset_density_ratio": 1.72,
+      "detected_onsets": 362,
+      "theoretical_beats": 210,
+      "per_section_spike_density": [
+        0.7,
+        0.8,
+        0.6,
+        0.6,
+        1.1,
+        0.6,
+        1.5,
+        1.2,
+        0.8
+      ],
+      "spectral_centroid_per_section": [
+        3672.0,
+        4121.0,
+        3631.0,
+        3631.0,
+        4133.0,
+        3559.0,
+        4376.0,
+        3724.0,
+        3461.0
+      ],
+      "inter_beat_variance": 0.1197,
+      "spike_band_profile": {
+        "low_energy_ratio": 0.461,
+        "mid_energy_ratio": 0.324,
+        "high_energy_ratio": 0.215
+      }
+    },
+    "sections": {
+      "count": 9,
+      "boundaries_seconds": [
+        33.4,
+        50.4,
+        59.5,
+        100.1,
+        116.6,
+        126.2,
+        133.6,
+        142.1
+      ],
+      "durations_seconds": [
+        31.9,
+        16.7,
+        8.8,
+        38.6,
+        15.7,
+        9.4,
+        7.3,
+        8.3,
+        16.5
+      ],
+      "duration_variance": "irregular"
+    },
+    "derived": {
+      "dynamic_climax_position": 0.868,
+      "tension_dynamics_offset_seconds": 9.2,
+      "vocal_density_per_section": [
+        0.3,
+        0.16,
+        0.23,
+        0.32,
+        0.18,
+        0.23,
+        0.17,
+        0.28,
+        0.18
+      ],
+      "chroma_diversity_per_section": [
+        3.32,
+        3.33,
+        3.21,
+        3.32,
+        3.31,
+        3.24,
+        3.18,
+        3.24,
+        3.28
+      ],
+      "rhythmic_acceleration": 0.06,
+      "section_duration_variance": "irregular",
+      "harmonic_arc_direction": {
+        "first_half_dominant": [
+          "A",
+          "D"
+        ],
+        "second_half_dominant": [
+          "A",
+          "D"
+        ]
+      },
+      "harmonic_velocity": 0.0438,
+      "melodic_contour_class": "descending",
+      "spectral_gravity_drift": -10.3,
+      "rhythmic_regularity": 0.1197,
+      "harmonic_pull_strength": 0.335,
+      "onset_density_ratio": 1.72
+    },
+    "harmonic_function_distribution": {
+      "tonic_pct": 26.2,
+      "dominant_pct": 46.4,
+      "chromatic_pct": 27.3
+    },
+    "identity": {
+      "artist": "Tommy Dadmun",
+      "title": "Plane to Heaven",
+      "date": "2008-08-30T07:00:00Z",
+      "year": 2008,
+      "album": "Axiom",
+      "source": "tags",
+      "source_filename": "planeToHeaven.m4a"
+    }
+  },
+  "interpretive_summary": {
+    "version": "1.2",
+    "renderer": "sonnet",
+    "claims_selected": [
+      {
+        "category": "demonstration",
+        "surprise": 0.0,
+        "key_metric": "top_pitch_classes",
+        "data": {
+          "top_pitches": [
+            "A",
+            "D"
+          ],
+          "proportions": [
+            0.204,
+            0.141
+          ],
+          "color_names": [
+            "spring green",
+            "gold-green"
+          ]
+        }
+      },
+      {
+        "category": "demonstration",
+        "surprise": 0.0,
+        "key_metric": "section_boundary",
+        "data": {
+          "section_count": 9,
+          "boundary_time_seconds": 59.5,
+          "boundary_time_formatted": "0:59"
+        }
+      },
+      {
+        "category": "dynamic",
+        "surprise": 1.0,
+        "key_metric": "climax_position",
+        "data": {
+          "peak_rms_position": 0.868,
+          "is_early": false,
+          "is_late": true
+        }
+      },
+      {
+        "category": "dynamic",
+        "surprise": 1.0,
+        "key_metric": "dynamic_range",
+        "data": {
+          "dynamic_range_db": 6.7,
+          "is_compressed": true,
+          "is_wide": false
+        }
+      },
+      {
+        "category": "rhythmic",
+        "surprise": 1.0,
+        "key_metric": "onset_density",
+        "data": {
+          "onset_density_ratio": 1.72,
+          "is_syncopated": true,
+          "is_sparse": false
+        }
+      }
+    ],
+    "claims_all": [
+      {
+        "category": "demonstration",
+        "surprise": 0.0,
+        "key_metric": "top_pitch_classes",
+        "data": {
+          "top_pitches": [
+            "A",
+            "D"
+          ],
+          "proportions": [
+            0.204,
+            0.141
+          ],
+          "color_names": [
+            "spring green",
+            "gold-green"
+          ]
+        }
+      },
+      {
+        "category": "demonstration",
+        "surprise": 0.0,
+        "key_metric": "section_boundary",
+        "data": {
+          "section_count": 9,
+          "boundary_time_seconds": 59.5,
+          "boundary_time_formatted": "0:59"
+        }
+      },
+      {
+        "category": "structural",
+        "surprise": 1.0,
+        "key_metric": "section_count",
+        "data": {
+          "section_count": 9,
+          "is_binary": false,
+          "is_complex": true
+        }
+      },
+      {
+        "category": "structural",
+        "surprise": 0.6,
+        "key_metric": "section_duration_pattern",
+        "data": {
+          "durations_seconds": [
+            31.9,
+            16.7,
+            8.8,
+            38.6,
+            15.7,
+            9.4,
+            7.3,
+            8.3,
+            16.5
+          ],
+          "min_seconds": 7.3,
+          "max_seconds": 38.6,
+          "avg_seconds": 17.0,
+          "variance": "irregular"
+        }
+      },
+      {
+        "category": "harmonic",
+        "surprise": 0.0,
+        "key_metric": "harmonic_adventurousness",
+        "data": {
+          "active_pitch_classes": 6,
+          "top_pitches": [
+            "A",
+            "D",
+            "C"
+          ],
+          "top_colors": [
+            "spring green",
+            "gold-green",
+            "warm coral"
+          ],
+          "is_chromatic": false,
+          "is_focused": false
+        }
+      },
+      {
+        "category": "dynamic",
+        "surprise": 1.0,
+        "key_metric": "climax_position",
+        "data": {
+          "peak_rms_position": 0.868,
+          "is_early": false,
+          "is_late": true
+        }
+      },
+      {
+        "category": "dynamic",
+        "surprise": 0.6133333333333333,
+        "key_metric": "tension_dynamics_offset",
+        "data": {
+          "offset_seconds": 9.2,
+          "abs_offset_seconds": 9.2,
+          "tension_peaks_first": false,
+          "nearly_coincident": false,
+          "peak_tension_position": 0.923,
+          "peak_rms_position": 0.868
+        }
+      },
+      {
+        "category": "dynamic",
+        "surprise": 1.0,
+        "key_metric": "dynamic_range",
+        "data": {
+          "dynamic_range_db": 6.7,
+          "is_compressed": true,
+          "is_wide": false
+        }
+      },
+      {
+        "category": "vocal",
+        "surprise": 0.8114285714285714,
+        "key_metric": "vocal_presence",
+        "data": {
+          "presence_pct": 26.6,
+          "longest_gap_seconds": 5.1,
+          "longest_gap_start_formatted": null,
+          "per_section_presence": [
+            0.3,
+            0.16,
+            0.23,
+            0.32,
+            0.18,
+            0.23,
+            0.17,
+            0.28,
+            0.18
+          ]
+        }
+      },
+      {
+        "category": "vocal",
+        "surprise": 0.18000000000000008,
+        "key_metric": "vocal_range",
+        "data": {
+          "range_semitones": 12.1,
+          "median_note": "A2",
+          "median_midi": 44.7,
+          "is_wide": false,
+          "is_narrow": false
+        }
+      },
+      {
+        "category": "rhythmic",
+        "surprise": 1.0,
+        "key_metric": "onset_density",
+        "data": {
+          "onset_density_ratio": 1.72,
+          "is_syncopated": true,
+          "is_sparse": false
+        }
+      }
+    ],
+    "prose": "The Prism Ring displays spring green and gold-green as its most prominent color bands, reflecting the song's emphasis on A and D pitch classes that account for over a third of the harmonic content, establishing a foundation that pulls the ear toward familiar territory even as complexity builds around it. Nine distinct section gaps break the composition into irregular fragments at points like the 0:59 boundary, creating a stop-start momentum that mirrors the song's syncopated rhythmic density of 1.72 times normal pacing, where each expected beat spawns additional percussive events that thicken the texture without obscuring the pulse. The spike clusters show bass-heavy energy distribution with gold spikes dominating over white and ice-blue equivalents, anchoring the rhythmic complexity in low-frequency percussion that provides stability beneath the fragmented structure. The song's compressed 6.7 dB dynamic range maintains consistent intensity throughout most of its length before delivering its loudest moment at 87% completion, denying the typical arc of tension and release in favor of sustained engagement that makes the final peak feel like an emphatic statement rather than a climactic arrival."
+  }
+}

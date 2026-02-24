@@ -1,42 +1,673 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ═══════════════════════════════════════════════════════
+   SONICTURE — globals.css
+   Digital Museum Design System
+   ═══════════════════════════════════════════════════════ */
+
+/* ═══ FONT FACES ═══ */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/fonts/space-mono/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* ═══ DESIGN TOKENS ═══ */
+
+:root {
+  /* ── Void ── */
+  --void: #050505;
+  --void-elevated: #0A0A0A;
+
+  /* ── Opacity Hierarchy ── */
+  --alpha-primary: 0.85;
+  --alpha-secondary: 0.65;
+  --alpha-whisper: 0.25;
+
+  /* ── Text ── */
+  --text-primary: rgba(255, 255, 255, 0.85);
+  --text-secondary: rgba(136, 136, 136, 0.65);
+  --text-whisper: rgba(255, 255, 255, 0.25);
+
+  /* ── OKLCH Palette ── */
+  --pitch-c:  #FBA283;
+  --pitch-g:  #F3BB7D;
+  --pitch-d:  #D4D087;
+  --pitch-a:  #9DE698;
+  --pitch-e:  #61DAB6;
+  --pitch-b:  #00CDCC;
+  --pitch-fs: #12B9D6;
+  --pitch-db: #5AA3D8;
+  --pitch-ab: #8991CE;
+  --pitch-eb: #B17BC0;
+  --pitch-bb: #D484A8;
+  --pitch-f:  #EF8E96;
+
+  /* ── Accent Roles ── */
+  --accent-home: var(--pitch-c);
+  --accent-distant: var(--pitch-fs);
+
+  /* ── Spatial ── */
+  --margin-golden: max(24px, 10vw);
+  --prose-max-width: 65ch;
+  --section-min-height: 100vh;
+  --section-min-height: 100dvh;
+
+  /* ── Typography ── */
+  --font-soul: 'Montserrat', sans-serif;
+  --font-science: 'Space Mono', monospace;
+  --line-height-body: 1.4;
+  --line-height-display: 1.1;
+
+  /* ── Motion ── */
+  --duration-encounter: 1200ms;
+  --duration-placard: 200ms;
+  --duration-transition: 800ms;
+  --duration-hover: 300ms;
+  --ease-museum: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+
+  /* ── Whisper Line ── */
+  --whisper-color: rgba(255, 255, 255, 0.25);
+  --whisper-width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --duration-encounter: 0ms;
+    --duration-placard: 0ms;
+    --duration-transition: 0ms;
+    --duration-hover: 0ms;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* ═══ BASE RESET ═══ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--void);
+  color: var(--text-primary);
+  font-family: var(--font-soul);
+  line-height: var(--line-height-body);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* ═══ SECTION LAYOUT ═══ */
+
+.section-viewport {
+  min-height: var(--section-min-height);
+  scroll-snap-align: start;
+  padding: var(--margin-golden);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.section-tall {
+  padding: var(--margin-golden);
+}
+
+/* ═══ WHISPER LINE ═══ */
+
+.whisper-line {
+  width: 100%;
+  height: var(--whisper-width);
+  background: var(--whisper-color);
+  border: none;
+}
+
+/* ═══ HERO ═══ */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 4vh, 4rem);
+}
+
+.hero-sonicture-wrapper {
+  width: clamp(340px, 72vmin, 860px);
+  aspect-ratio: 1 / 1;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: encounter var(--duration-encounter) var(--ease-museum) forwards;
+}
+
+@keyframes encounter {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
+}
+
+.hero-sonicture-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-tagline {
+  text-align: center;
+  max-width: var(--prose-max-width);
+}
+
+.hero-tagline-line {
+  font-family: var(--font-soul);
+  font-weight: 300;
+  font-size: clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
+  line-height: var(--line-height-display);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: placard-in var(--duration-transition) var(--ease-museum) forwards;
+}
+
+.hero-tagline-line:nth-child(1) {
+  animation-delay: calc(var(--duration-encounter) + 200ms);
+}
+
+.hero-tagline-line:nth-child(2) {
+  animation-delay: calc(var(--duration-encounter) + 400ms);
+}
+
+.hero-tagline-line:nth-child(3) {
+  animation-delay: calc(var(--duration-encounter) + 800ms);
+  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 0.85rem + 0.75vw, 1.35rem);
+  margin-top: 1.5em;
+}
+
+@keyframes placard-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Hero scroll hint ── */
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: clamp(1.5rem, 3vh, 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: hint-fade 1s var(--ease-museum) forwards;
+  animation-delay: calc(var(--duration-encounter) + 1200ms);
+}
+
+.hero-scroll-hint::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-right: var(--whisper-width) solid var(--whisper-color);
+  border-bottom: var(--whisper-width) solid var(--whisper-color);
+  transform: rotate(45deg);
+  animation: hint-pulse 3s ease-in-out infinite;
+  animation-delay: calc(var(--duration-encounter) + 2000ms);
+}
+
+@keyframes hint-fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hint-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.35; }
+}
+
+/* ═══ PLACEHOLDER SECTIONS ═══ */
+
+.section-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-whisper);
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ═══ GALLERY ═══ */
+
+.gallery-section {
+  min-height: var(--section-min-height);
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--margin-golden);
+  padding-bottom: var(--margin-golden);
+}
+
+.gallery-header {
+  padding-left: var(--margin-golden);
+  padding-right: var(--margin-golden);
+  margin-bottom: clamp(2rem, 4vh, 4rem);
+}
+
+.gallery-heading {
+  font-family: var(--font-soul);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: var(--line-height-display);
+  margin-bottom: 0.5rem;
+}
+
+.gallery-subheading {
+  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.15rem);
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-room {
+  flex: 0 0 100%;
+  min-width: 100%;
+  scroll-snap-align: center;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: calc(var(--margin-golden) * 0.5);
+  padding: 0 var(--margin-golden);
+  align-items: center;
+}
+
+.gallery-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ── Companion Panel ── */
+.gallery-companion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 480px;
+}
+
+.companion-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.companion-title {
+  font-family: var(--font-soul);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 600;
+  line-height: var(--line-height-display);
+  color: var(--text-primary);
+}
+
+.companion-artist {
+  font-family: var(--font-soul);
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.companion-album {
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  margin-top: 0.1rem;
+}
+
+.companion-whisper-line {
+  width: 100%;
+  border: none;
+  border-top: var(--whisper-width) solid var(--whisper-color);
+}
+
+.companion-specs {
+  font-family: var(--font-science);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.specs-divider {
+  color: var(--text-whisper);
+}
+
+.companion-pitches {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pitch-swatch-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pitch-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+}
+
+.pitch-label {
+  font-family: var(--font-science);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.companion-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+}
+
+.matrix-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.matrix-label {
+  font-family: var(--font-science);
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+  color: var(--text-whisper);
+  text-transform: uppercase;
+}
+
+.matrix-value {
+  font-family: var(--font-science);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.companion-prose {
+  font-family: var(--font-soul);
+  font-size: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: var(--prose-max-width);
+}
+
+/* ── Gallery Dots ── */
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: clamp(1.5rem, 3vh, 3rem);
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: var(--whisper-width) solid var(--whisper-color);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--duration-hover) var(--ease-museum),
+              border-color var(--duration-hover) var(--ease-museum);
+}
+
+.gallery-dot:hover {
+  border-color: var(--text-secondary);
+}
+
+.gallery-dot--active {
+  background: var(--accent-home);
+  border-color: var(--accent-home);
+}
+
+/* ── Mobile: Stack Vertically ── */
+
+@media (max-width: 768px) {
+  .gallery-scroll {
+    scroll-snap-type: none;
+    flex-direction: column;
+    overflow-x: visible;
+    gap: clamp(3rem, 6vh, 5rem);
+  }
+
+  .gallery-room {
+    grid-template-columns: 1fr;
+    flex: none;
+    min-width: auto;
+    gap: 1.5rem;
+  }
+
+  .gallery-image img {
+    max-width: 100%;
+  }
+
+  .gallery-companion {
+    max-width: 100%;
+  }
+
+  .gallery-dots {
+    display: none;
+  }
+}
+
+/* ═══ PHILOSOPHY ═══ */
+
+.philosophy-wrapper {
+  padding: var(--margin-golden);
+  max-width: 900px;
+}
+
+.philosophy-header {
+  margin-bottom: clamp(3rem, 6vh, 5rem);
+}
+
+.philosophy-heading {
+  font-family: var(--font-soul);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: var(--line-height-display);
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-subheading {
+  font-family: var(--font-soul);
+  font-weight: 300;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: var(--prose-max-width);
+}
+
+.philosophy-steps {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vh, 4rem);
+}
+
+.philosophy-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step-headline {
+  font-family: var(--font-soul);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+  font-weight: 600;
+  line-height: var(--line-height-display);
+  color: var(--text-primary);
+}
+
+.step-body {
+  font-family: var(--font-soul);
+  font-size: clamp(0.9rem, 0.85rem + 0.25vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: var(--prose-max-width);
+}
+
+/* ═══ CONTACT ═══ */
+
+#contact {
+  background: var(--void-elevated);
+}
+
+.contact-wrapper {
+  max-width: 540px;
+}
+
+.contact-heading {
+  font-family: var(--font-soul);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: var(--line-height-display);
+  margin-bottom: 0.75rem;
+}
+
+.contact-body {
+  color: var(--text-secondary);
+  font-size: clamp(0.9rem, 0.85rem + 0.25vw, 1.05rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: var(--prose-max-width);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.form-label span {
+  display: block;
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: var(--whisper-width) solid var(--whisper-color);
+  color: var(--text-primary);
+  font-family: var(--font-science);
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  transition: border-color var(--duration-hover) var(--ease-museum);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-home);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.form-submit {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: var(--whisper-width) solid var(--text-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-soul);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: border-color var(--duration-hover) var(--ease-museum),
+              color var(--duration-hover) var(--ease-museum);
+}
+
+.form-submit:hover {
+  border-color: var(--accent-home);
+  color: var(--accent-home);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-error {
+  margin-top: 1rem;
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  color: var(--accent-home);
 }

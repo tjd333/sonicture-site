@@ -1,0 +1,100 @@
+
+/* ═══ CONTACT ═══ */
+
+#contact {
+  background: var(--void-elevated);
+}
+
+.contact-wrapper {
+  max-width: 540px;
+}
+
+.contact-heading {
+  font-family: var(--font-soul);
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: var(--line-height-display);
+  margin-bottom: 0.75rem;
+}
+
+.contact-body {
+  color: var(--text-secondary);
+  font-size: clamp(0.9rem, 0.85rem + 0.25vw, 1.05rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: var(--prose-max-width);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.form-label span {
+  display: block;
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: var(--whisper-width) solid var(--whisper-color);
+  color: var(--text-primary);
+  font-family: var(--font-science);
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  transition: border-color var(--duration-hover) var(--ease-museum);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-home);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.form-submit {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: var(--whisper-width) solid var(--text-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-soul);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: border-color var(--duration-hover) var(--ease-museum),
+              color var(--duration-hover) var(--ease-museum);
+}
+
+.form-submit:hover {
+  border-color: var(--accent-home);
+  color: var(--accent-home);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-error {
+  margin-top: 1rem;
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  color: var(--accent-home);
+}
