@@ -512,8 +512,17 @@ img {
     max-width: 100%;
   }
 
-  .gallery-dots {
+.gallery-dots {
     display: none;
+  }
+
+  .companion-matrix {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .companion-specs {
+    font-size: 0.65rem;
   }
 }
 
@@ -670,4 +679,22 @@ img {
   font-family: var(--font-science);
   font-size: 0.75rem;
   color: var(--accent-home);
+}
+/* ═══ DEEP-LINK NAV ═══ */
+
+.deeplink-nav {
+  padding: 1.5rem var(--margin-golden);
+}
+
+.deeplink-back {
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-hover) var(--ease-museum);
+}
+
+.deeplink-back:hover {
+  color: var(--text-primary);
 }
