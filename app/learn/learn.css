@@ -124,7 +124,7 @@
   font-weight: 300;
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   font-style: italic;
 }
 
@@ -324,14 +324,14 @@
 /* ── Notation Bridge ── */
 
 .notation-bridge {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .notation-bridge__svg {
-  width: min(100%, 240px);
+  width: min(100%, 160px);
   height: auto;
 }
 

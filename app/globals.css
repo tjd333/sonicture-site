@@ -47,7 +47,7 @@
 
   /* ── Text ── */
   --text-primary: rgba(255, 255, 255, 0.85);
-  --text-secondary: rgba(136, 136, 136, 0.65);
+  --text-secondary: rgba(255, 255, 255, 0.55);
   --text-whisper: rgba(255, 255, 255, 0.25);
 
   /* ── OKLCH Palette ── */
