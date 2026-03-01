@@ -88,6 +88,46 @@
   margin-bottom: clamp(2.5rem, 5vh, 5rem);
 }
 
+/* ── Section Headlines ── */
+
+.learn-section-headline {
+  font-family: var(--font-soul);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: var(--line-height-display);
+  color: var(--text-primary);
+  text-align: left;
+  max-width: 40ch;
+  margin-bottom: clamp(2rem, 4vh, 4rem);
+}
+
+.learn-section-headline--quiet {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* Center the headline in centered sections */
+.learn-section--centered .learn-section-headline {
+  text-align: left;
+}
+
+/* ── Lyrics Aside (after grammar elements) ── */
+
+.vg-lyrics-aside {
+  max-width: var(--prose-max-width);
+  margin: 0 auto;
+  padding-top: clamp(2rem, 4vh, 4rem);
+}
+
+.vg-lyrics-aside__text {
+  font-family: var(--font-soul);
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 /* ── Prose Blocks ── */
 
 .learn-prose {

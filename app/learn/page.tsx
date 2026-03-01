@@ -21,6 +21,17 @@ export const metadata: Metadata = {
 
 const grammarElements = [
   {
+    heading: 'The center is the song\u2019s harmonic identity.',
+    keyword: 'center',
+    body: [
+      'A gradient at the core represents the global tonal character of the song, its home key, its gravitational center. Everything else orbits this identity.',
+    ],
+    imageSrc: '/learn/07-center-gradient',
+    imageAlt: 'Detail crop of the sonicture core showing the harmonic identity gradient',
+    aspectRatio: 1,
+    annotations: [],
+  },
+  {
     heading: 'Color is pitch.',
     keyword: 'Color',
     body: [
@@ -28,7 +39,7 @@ const grammarElements = [
       'When the harmony is simple, two or three notes sounding together, you see clean, distinct bands of color within each ring. When the harmony is complex, the colors layer. At close inspection, a musician can identify the chord.',
     ],
     imageSrc: '/learn/01-color-bands',
-    imageAlt: 'Detail crop showing distinct color bands within a ring — amber (G), green (B), olive-gold (D)',
+    imageAlt: 'Detail crop showing distinct color bands within a ring \u2014 amber (G), green (B), olive-gold (D)',
     aspectRatio: 1700 / 1200,
     annotations: [],
     hasNotationBridge: true,
@@ -48,7 +59,7 @@ const grammarElements = [
     heading: 'Spikes are percussion.',
     keyword: 'Spikes',
     body: [
-      'The sharp lines radiating outward from the rings capture percussive energy: the attacks, hits, and transients that give music its forward motion. Different frequency ranges produce different visual signatures. The weight of a kick drum, the crack of a snare, the shimmer of a cymbal each appear with distinct character.',
+      'The sharp lines radiating outward from the rings capture percussive energy: the attacks, hits, and transients that give music its forward motion. Different frequency ranges produce different visual signatures. The weight of a kick drum, the crack of a snare, the shimmer of a cymbal \u2014 each appear with distinct character.',
     ],
     imageSrc: '/learn/03-spikes',
     imageAlt: 'Detail crop showing spike variations radiating outward from the ring edge',
@@ -56,24 +67,14 @@ const grammarElements = [
     annotations: [],
   },
   {
-    heading: 'Drift is harmonic motion.',
-    keyword: 'Drift',
+    heading: 'Drift and gaps map the song\u2019s structure.',
+    keyword: 'Drift and gaps',
     body: [
       'A song that stays in one key produces concentric rings, stable, centered, gravitationally anchored. A song that moves through different harmonic territory produces rings that visibly drift, pulled toward the new tonal center. The degree of drift reveals how far the music wanders from home.',
-    ],
-    imageSrc: '/learn/04-drift',
-    imageAlt: 'Detail crop showing ring centers shifting as harmony modulates',
-    aspectRatio: 1600 / 1200,
-    annotations: [],
-  },
-  {
-    heading: 'Gaps mark structural shifts.',
-    keyword: 'Gaps',
-    body: [
-      'Where the rings separate, the music measurably changes character. A new section begins. These are not always the familiar verse and chorus boundaries. They are moments where the musical properties shift in meaningful ways: a change in harmonic vocabulary, dynamic level, rhythmic density, or timbral character.',
+      'Where the rings separate, the music measurably changes character. A new section begins. These are not always the familiar verse and chorus boundaries. They are moments where the musical properties shift together: harmonic vocabulary, dynamic level, rhythmic density, timbral character. The gap is the evidence.',
     ],
     imageSrc: '/learn/05-section-gap',
-    imageAlt: 'Detail crop showing a boundary gap between sections with visible character change',
+    imageAlt: 'Detail crop showing a structural boundary where ring character and spacing visibly change',
     aspectRatio: 1400 / 1300,
     annotations: [],
   },
@@ -85,18 +86,7 @@ const grammarElements = [
     ],
     imageSrc: '/learn/06-melody-thread',
     imageAlt: 'Detail crop showing the vocal melody thread as a chain of bright white dots across the rings',
-    aspectRatio: 1600 / 1200,
-    annotations: [],
-  },
-  {
-    heading: 'The center is the song\u2019s harmonic identity.',
-    keyword: 'center',
-    body: [
-      'A gradient at the core represents the global tonal character of the song, its home key, its gravitational center. Everything else orbits this identity.',
-    ],
-    imageSrc: '/learn/07-center-gradient',
-    imageAlt: 'Detail crop of the sonicture core showing the harmonic identity gradient',
-    aspectRatio: 1,
+    aspectRatio: 1000 / 800,
     annotations: [],
   },
 ];
@@ -134,6 +124,10 @@ export default function LearnPage() {
 
       {/* ═══ SECTION 2: HOW TO READ A SONICTURE ═══ */}
       <LearnSection id="how-to-read" variant="visual-grammar">
+
+        <p className="learn-section-headline">
+          Every element is evidence.
+        </p>
 
         {/* 2a: Orientation */}
         <div className="vg-orientation">
@@ -174,10 +168,24 @@ export default function LearnPage() {
             {el.hasNotationBridge && <NotationBridge />}
           </VisualGrammarElement>
         ))}
+
+        {/* 2c: Lyrics observation — Ive-style reveal */}
+        <div className="vg-lyrics-aside">
+          <p className="vg-lyrics-aside__text">
+            Look closer at any of these images. The faint text woven into
+            the rings is the song&rsquo;s lyrics, positioned at the exact
+            moment each word is sung. At normal viewing distance they read
+            as texture. At this scale, they become legible &mdash; another
+            layer of the music preserved in its visual form.
+          </p>
+        </div>
       </LearnSection>
 
       {/* ═══ SECTION 3: WHY IT WORKS ═══ */}
       <LearnSection id="why-it-works" variant="centered">
+        <p className="learn-section-headline">
+          Beauty is a consequence of accuracy.
+        </p>
         <div className="learn-prose">
           <p>
             A sonicture is a visual form of music. Not artwork about music, but a
@@ -220,6 +228,9 @@ export default function LearnPage() {
 
       {/* ═══ SECTION 4: A NEW CATEGORY ═══ */}
       <LearnSection id="new-category" variant="centered">
+        <p className="learn-section-headline">
+          Transformation, not generation.
+        </p>
         <div className="learn-prose learn-prose--manifesto">
           <p>
             A sonicture is a truthful transformation of music, not a creative
@@ -256,6 +267,9 @@ export default function LearnPage() {
 
       {/* ═══ SECTION 5: INFLUENCES ═══ */}
       <LearnSection id="influences" variant="credits" noWhisper>
+        <p className="learn-section-headline learn-section-headline--quiet">
+          Three ideas that shaped the system.
+        </p>
         <p className="learn-credits__intro">
           Sonicture&rsquo;s philosophy draws from three thinkers whose ideas
           shaped its design principles.
