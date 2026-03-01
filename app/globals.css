@@ -516,6 +516,11 @@ img {
   max-width: var(--prose-max-width);
 }
 
+.companion-prose strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+}
+
 /* ── Gallery Dots ── */
 
 .gallery-dots {
