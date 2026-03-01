@@ -1,7 +1,7 @@
 import { HeroSonicture } from "@/components/HeroSonicture";
 import { HeroTagline } from "@/components/HeroTagline";
 import { GalleryContainer } from "@/components/GalleryContainer";
-import { PhilosophySection } from "@/components/PhilosophySection";
+import { PhilosophyTeaser } from '@/components/PhilosophyTeaser';
 import { ContactForm } from "@/components/ContactForm";
 import { WhisperLine } from "@/components/WhisperLine";
 
@@ -22,8 +22,8 @@ export default function Home() {
 
       <WhisperLine />
 
-      <section id="philosophy" className="section-tall">
-        <PhilosophySection />
+      <section id="philosophy" className="section-viewport">
+        <PhilosophyTeaser />
       </section>
 
       <WhisperLine />

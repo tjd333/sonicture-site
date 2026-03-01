@@ -28,13 +28,9 @@ const grammarElements = [
       'When the harmony is simple, two or three notes sounding together, you see clean, distinct bands of color within each ring. When the harmony is complex, the colors layer. At close inspection, a musician can identify the chord.',
     ],
     imageSrc: '/learn/01-color-bands',
-    imageAlt: 'Detail crop showing distinct color bands within a ring, with pitch class annotations',
+    imageAlt: 'Detail crop showing distinct color bands within a ring — amber (G), green (B), olive-gold (D)',
     aspectRatio: 1700 / 1200,
-    annotations: [
-      { label: 'G', x: 30, y: 35 },
-      { label: 'B', x: 50, y: 50 },
-      { label: 'D', x: 70, y: 65 },
-    ],
+    annotations: [],
     hasNotationBridge: true,
   },
   {
@@ -46,11 +42,7 @@ const grammarElements = [
     imageSrc: '/learn/02-thickness',
     imageAlt: 'Detail crop showing rings growing from thin to thick across a crescendo',
     aspectRatio: 1800 / 1300,
-    annotations: [
-      { label: 'quiet', x: 20, y: 50 },
-      { label: '\u2192', x: 50, y: 50 },
-      { label: 'loud', x: 80, y: 50 },
-    ],
+    annotations: [],
   },
   {
     heading: 'Spikes are percussion.',
@@ -59,12 +51,9 @@ const grammarElements = [
       'The sharp lines radiating outward from the rings capture percussive energy: the attacks, hits, and transients that give music its forward motion. Different frequency ranges produce different visual signatures. The weight of a kick drum, the crack of a snare, the shimmer of a cymbal each appear with distinct character.',
     ],
     imageSrc: '/learn/03-spikes',
-    imageAlt: 'Detail crop showing spike variations, thick gold low-frequency spikes and thin blue high-frequency spikes',
-    aspectRatio: 2000 / 800,
-    annotations: [
-      { label: 'kick', x: 25, y: 70 },
-      { label: 'cymbal', x: 75, y: 30 },
-    ],
+    imageAlt: 'Detail crop showing spike variations radiating outward from the ring edge',
+    aspectRatio: 1800 / 1200,
+    annotations: [],
   },
   {
     heading: 'Drift is harmonic motion.',
@@ -74,10 +63,8 @@ const grammarElements = [
     ],
     imageSrc: '/learn/04-drift',
     imageAlt: 'Detail crop showing ring centers shifting as harmony modulates',
-    aspectRatio: 1700 / 1600,
-    annotations: [
-      { label: 'harmonic center moves', x: 50, y: 75 },
-    ],
+    aspectRatio: 1600 / 1200,
+    annotations: [],
   },
   {
     heading: 'Gaps mark structural shifts.',
@@ -88,9 +75,7 @@ const grammarElements = [
     imageSrc: '/learn/05-section-gap',
     imageAlt: 'Detail crop showing a boundary gap between sections with visible character change',
     aspectRatio: 1400 / 1300,
-    annotations: [
-      { label: 'section boundary', x: 50, y: 45 },
-    ],
+    annotations: [],
   },
   {
     heading: 'The melody line is the artist\u2019s voice.',
@@ -99,11 +84,9 @@ const grammarElements = [
       'A continuous white thread traces the pitch of the vocal through the song. It captures not just which notes are sung but how: the smooth slides, the sudden leaps, the held moments. Where the voice is absent, a faint ghost line marks the instrumental passage.',
     ],
     imageSrc: '/learn/06-melody-thread',
-    imageAlt: 'Detail crop showing the vocal melody thread with runs and leaps visible',
-    aspectRatio: 1400 / 1200,
-    annotations: [
-      { label: 'vocal melody', x: 50, y: 30 },
-    ],
+    imageAlt: 'Detail crop showing the vocal melody thread as a chain of bright white dots across the rings',
+    aspectRatio: 1600 / 1200,
+    annotations: [],
   },
   {
     heading: 'The center is the song\u2019s harmonic identity.',
@@ -114,9 +97,7 @@ const grammarElements = [
     imageSrc: '/learn/07-center-gradient',
     imageAlt: 'Detail crop of the sonicture core showing the harmonic identity gradient',
     aspectRatio: 1,
-    annotations: [
-      { label: 'harmonic identity', x: 50, y: 50 },
-    ],
+    annotations: [],
   },
 ];
 

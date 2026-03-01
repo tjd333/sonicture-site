@@ -20,12 +20,12 @@ export function NotationBridge() {
         aria-label="G major chord on a treble clef staff with note heads colored by sonicture palette: G in amber, B in green, D in olive-gold"
       >
         {/* ── Staff Lines ── */}
-        <g stroke="rgba(255,255,255,0.25)" strokeWidth="1">
-          <line x1="30" y1="55" x2="220" y2="55" />
-          <line x1="30" y1="70" x2="220" y2="70" />
-          <line x1="30" y1="85" x2="220" y2="85" />
-          <line x1="30" y1="100" x2="220" y2="100" />
-          <line x1="30" y1="115" x2="220" y2="115" />
+        <g stroke="rgba(255,255,255,0.2)" strokeWidth="0.75">
+          <line x1="50" y1="55" x2="200" y2="55" />
+          <line x1="50" y1="70" x2="200" y2="70" />
+          <line x1="50" y1="85" x2="200" y2="85" />
+          <line x1="50" y1="100" x2="200" y2="100" />
+          <line x1="50" y1="115" x2="200" y2="115" />
         </g>
 
         {/* ── Treble Clef ── */}
