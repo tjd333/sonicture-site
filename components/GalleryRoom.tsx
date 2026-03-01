@@ -1,5 +1,6 @@
 import type { GalleryItem } from "@/lib/types";
 import { pitchColor, formatDuration } from "@/lib/palette";
+import { renderProse } from "@/lib/prose";
 import { SonictureImage } from "./SonictureImage";
 
 interface Props {
@@ -91,7 +92,7 @@ export function GalleryRoom({ item, index }: Props) {
 
         {/* Interpretive summary */}
         {item.prose && (
-          <p className="companion-prose">{item.prose}</p>
+          <p className="companion-prose">{renderProse(item.prose)}</p>
         )}
       </div>
     </div>

@@ -17,7 +17,7 @@ export const galleryItems: GalleryItem[] = [
     climaxPct: 85,
     a4Hz: 440.51,
     sampleRate: 22050,
-    prose: "Warm coral and spring green bands divide the pitch content almost equally, shifting constantly across ten distinct sections. The emotional peak arrives past the one-third mark while the volume peak waits until the final sixth, leaving a ninety-second gap where tension dissolves before loudness arrives. Deep magenta spike clusters ground the rhythm in bass weight. Vocal fragments appear briefly in every section, threading continuously through the instrumental texture without ever claiming extended territory.",
+    prose: "Coral and green bands divide the pitch content almost equally, shifting constantly across ten distinct sections. The emotional peak arrives past the one-third mark while the volume peak waits until the final sixth, leaving a ninety-second gap where tension dissolves before loudness arrives. Low-frequency spikes ground the rhythm in bass weight. Vocal fragments surface in every section, woven continuously through the instrumental texture without ever claiming extended territory.",
   },
   {
     slug: "axiom",
@@ -35,7 +35,7 @@ export const galleryItems: GalleryItem[] = [
     climaxPct: 41,
     a4Hz: 441.02,
     sampleRate: 22050,
-    prose: "Nearly half the percussive energy concentrates in deep violet bass clusters, while spring green and warm coral bands drift through rings compressed into just 5 decibels. The loudest moment lands at 40% through, but harmonic tension peaks in the final section, creating an arc where volume recedes as strain intensifies. The vocal melody appears briefly in every section, never absent for more than seven seconds, weaving a continuous thread through a structure that ranges from five-second fragments to a full minute of sustained contemplation.",
+    prose: "Nearly half the percussive energy concentrates in low-register bass clusters, while green and coral bands drift through rings compressed into just 5 decibels. The loudest moment lands at 40% through, but harmonic tension peaks in the final section; an arc where volume recedes as strain intensifies. The vocal melody surfaces in every section, never absent for more than seven seconds, weaving a continuous thread through a structure that ranges from five-second fragments to a full minute of sustained contemplation.",
   },
   {
     slug: "no-disclaimers",
@@ -71,7 +71,7 @@ export const galleryItems: GalleryItem[] = [
     climaxPct: 87,
     a4Hz: 441.27,
     sampleRate: 22050,
-    prose: "Compressed within a tight 6.7 dB dynamic range, every percussive detail bristles at the ring edges while deep violet bass clusters claim nearly half the rhythmic weight. Nine sections vary dramatically, from a brief 7-second fragment to one 38-second passage dominating the center. Spring green commands over twenty percent of the harmonic content. The loudest peak holds until the final third, so the climax must be reached, not simply encountered. Vocals thread briefly through the dense rhythmic texture that defines the bristling perimeter.",
+    prose: "Compressed within a tight 6.7 dB dynamic range, every percussive detail bristles at the ring edges while low-register clusters claim nearly half the rhythmic weight. Nine sections vary dramatically, from a brief 7-second fragment to one 38-second passage dominating the center. Green commands over twenty percent of the harmonic content. The loudest peak holds until the final third, so the climax must be reached, not simply encountered. Vocals trace briefly through the dense rhythmic texture that defines the bristling perimeter.",
   },
   {
     slug: "lovely",
@@ -89,7 +89,7 @@ export const galleryItems: GalleryItem[] = [
     climaxPct: 46,
     a4Hz: 440.51,
     sampleRate: 22050,
-    prose: "Eight uneven sections stretch from brief ten-second fragments to extended passages over forty seconds. Amber bands claim over twenty percent of the pitch content while deep violet percussion clusters ground the composition's wide nineteen-semitone vocal range. The emotional peak blazes at just over halfway through, yet maximum volume arrives nearly fifty seconds later, so the loudest moment feels like gentle resolution settling over prior intensity. The compressed 5.6 dB range allows the song's complexity to unfold through color and spacing.",
+    prose: "Eight uneven sections stretch from brief ten-second fragments to extended passages over forty seconds. Amber bands claim over twenty percent of the pitch content while bass percussion grounds the composition's wide nineteen-semitone vocal range. Tension peaks just past halfway through, yet maximum volume arrives nearly fifty seconds later, so the loudest moment feels like gentle resolution settling over prior intensity. The compressed 5.6 dB range allows the song's complexity to unfold through color and spacing.",
   },
   {
     slug: "she-waits",
@@ -107,7 +107,7 @@ export const galleryItems: GalleryItem[] = [
     climaxPct: 47,
     a4Hz: 442.04,
     sampleRate: 22050,
-    prose: "Jade and gold-green bands claim the largest visual territories as nine pitch classes sprawl across the harmonic landscape. The emotional peak blazes at just 16% through, but volume waits until 47%, so psychological intensity builds and dissipates long before sonic weight materializes. Ten sections create dramatic contrasts, from fleeting 4-second fragments to one sprawling 67-second passage. The compressed 4.9 dB range ensures every harmonic shift registers at nearly identical visual thickness.",
+    prose: "Jade and olive-gold bands claim the largest visual territories as nine pitch classes sprawl across the harmonic landscape. The emotional peak blazes at just 16% through, but volume waits until 47%, so psychological intensity builds and dissipates long before sonic weight materializes. Ten sections create dramatic contrasts, from fleeting 4-second fragments to one sprawling 67-second passage. At just 4.9 dB of dynamic range, every harmonic shift registers at nearly identical visual thickness.",
   },
   {
     slug: "thin-line-sunrise",
