@@ -101,6 +101,65 @@
   }
 }
 
+/* ═══ SITE NAV ═══ */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem var(--margin-golden);
+  pointer-events: none;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform var(--duration-transition) var(--ease-museum),
+              opacity var(--duration-transition) var(--ease-museum);
+}
+
+.site-nav--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.site-nav__logo,
+.site-nav__link {
+  pointer-events: auto;
+  text-decoration: none;
+  transition: color var(--duration-hover) var(--ease-museum);
+}
+
+.site-nav__logo {
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: lowercase;
+  color: var(--text-whisper);
+}
+
+.site-nav__logo:hover {
+  color: var(--text-secondary);
+}
+
+.site-nav__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-nav__link {
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-whisper);
+}
+
+.site-nav__link:hover {
+  color: var(--accent-home);
+}
+
 /* ═══ BASE RESET ═══ */
 
 *, *::before, *::after {
@@ -707,5 +766,38 @@ img {
 }
 
 .deeplink-back:hover {
+  color: var(--text-primary);
+}
+/* ═══ PHILOSOPHY TEASER ═══ */
+
+.philosophy-teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: var(--prose-max-width);
+  margin: 0 auto;
+  min-height: 60vh;
+}
+
+.philosophy-teaser__text {
+  font-family: var(--font-soul);
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.philosophy-teaser__cta {
+  font-family: var(--font-soul);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--accent-home);
+  text-decoration: none;
+  transition: color var(--duration-hover) var(--ease-museum);
+}
+
+.philosophy-teaser__cta:hover {
   color: var(--text-primary);
 }

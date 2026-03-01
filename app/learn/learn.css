@@ -1,0 +1,438 @@
+/* ═══════════════════════════════════════════════════════════
+ * LEARN PAGE STYLES
+ * All styles for /learn. Depends on design tokens in globals.css.
+ * Single file — no separate CSS per component.
+ * ═══════════════════════════════════════════════════════════ */
+
+/* ── Page Root ── */
+
+.learn-page {
+  scroll-snap-type: y proximity;
+}
+
+/* ── Section Wrapper ── */
+
+.learn-section {
+  min-height: var(--section-min-height);
+  padding: var(--margin-golden);
+  scroll-snap-align: start;
+}
+
+.learn-section--centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.learn-section--visual-grammar {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vh, 8rem);
+  padding-top: clamp(4rem, 10vh, 8rem);
+  padding-bottom: clamp(4rem, 10vh, 8rem);
+}
+
+.learn-section--credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--void-elevated);
+}
+
+.learn-section__inner {
+  width: 100%;
+}
+
+/* Credits variant: narrower inner, left-aligned */
+.learn-section--credits .learn-section__inner {
+  max-width: 55ch;
+  margin: 0 auto;
+}
+
+/* Centered variant: constrained width, left-aligned prose */
+.learn-section--centered .learn-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: var(--prose-max-width);
+  margin: 0 auto;
+}
+
+/* Visual grammar: full width inner with gaps */
+.learn-section--visual-grammar .learn-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vh, 8rem);
+}
+
+/* ── Whisper Line Separator ── */
+
+.learn-whisper {
+  height: var(--whisper-width);
+  background: var(--whisper-color);
+  margin: 0 var(--margin-golden);
+}
+
+/* ── Opening Statement (Section 1) ── */
+
+.learn-opening {
+  font-family: var(--font-soul);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: var(--line-height-display);
+  color: var(--text-primary);
+  text-align: left;
+  max-width: 40ch;
+  margin-bottom: clamp(2.5rem, 5vh, 5rem);
+}
+
+/* ── Prose Blocks ── */
+
+.learn-prose {
+  max-width: var(--prose-max-width);
+  text-align: left;
+}
+
+.learn-prose p {
+  font-family: var(--font-soul);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  margin-bottom: 1.25em;
+}
+
+.learn-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.learn-prose--narrow {
+  max-width: 55ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.learn-prose--manifesto {
+  max-width: 50ch;
+}
+
+/* ── Tagline ("have you seen it?") ── */
+
+.learn-tagline {
+  font-family: var(--font-soul);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: var(--line-height-display);
+  color: var(--text-primary);
+  text-align: left;
+  margin-top: clamp(4rem, 8vh, 6rem);
+  margin-bottom: clamp(4rem, 8vh, 6rem);
+}
+
+/* ── Pull Quote (Section 3) ── */
+
+.learn-pullquote {
+  font-family: var(--font-soul);
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--text-primary);
+  text-align: left;
+  max-width: 55ch;
+  margin: clamp(2.5rem, 5vh, 4rem) 0;
+  padding: 0;
+  border: none;
+}
+
+/* ── Orientation Image (Section 2 top) ── */
+
+.vg-orientation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 4vh, 3rem);
+}
+
+.vg-orientation__image {
+  position: relative;
+  width: clamp(280px, 55vw, 700px);
+}
+
+.vg-orientation__label {
+  position: absolute;
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  color: var(--text-whisper);
+  letter-spacing: 0.02em;
+}
+
+.vg-orientation__label--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vg-orientation__label--edge {
+  top: 50%;
+  right: -2rem;
+  transform: translateY(-50%);
+}
+
+/* ── Visual Grammar Element (alternating layout) ── */
+
+.vg-element {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image on the left, text on the right */
+.vg-element--left .vg-element__image {
+  order: 1;
+}
+.vg-element--left .vg-element__text {
+  order: 2;
+}
+
+/* Image on the right, text on the left */
+.vg-element--right .vg-element__image {
+  order: 2;
+}
+.vg-element--right .vg-element__text {
+  order: 1;
+}
+
+.vg-element__heading {
+  font-family: var(--font-soul);
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: var(--line-height-display);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.vg-element__heading strong {
+  font-weight: 600;
+}
+
+.vg-element__body {
+  font-family: var(--font-soul);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.3vw, 1.125rem);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  margin-bottom: 1em;
+}
+
+.vg-element__body:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile: always stacked, image above text */
+@media (max-width: 768px) {
+  .vg-element {
+    grid-template-columns: 1fr;
+  }
+
+  .vg-element--left .vg-element__image,
+  .vg-element--right .vg-element__image {
+    order: 1;
+  }
+
+  .vg-element--left .vg-element__text,
+  .vg-element--right .vg-element__text {
+    order: 2;
+  }
+}
+
+/* ── Detail Crop Image ── */
+
+.detail-crop {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  /* Placeholder styling — remove when real images are added */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.detail-crop__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-crop__annotation {
+  position: absolute;
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.65);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  white-space: nowrap;
+  padding: 0.15em 0.4em;
+  background: rgba(5, 5, 5, 0.6);
+  border-radius: 2px;
+}
+
+/* ── Notation Bridge ── */
+
+.notation-bridge {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.notation-bridge__svg {
+  width: min(100%, 280px);
+  height: auto;
+}
+
+.notation-bridge__caption {
+  font-family: var(--font-science);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-whisper);
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+/* ── Credits Section (Section 5) ── */
+
+.learn-credits__intro {
+  font-family: var(--font-soul);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.3vw, 1.125rem);
+  line-height: var(--line-height-body);
+  color: var(--text-secondary);
+  margin-bottom: clamp(2.5rem, 5vh, 4rem);
+  text-align: left;
+}
+
+.learn-credits__block {
+  margin-bottom: clamp(2rem, 4vh, 3rem);
+}
+
+.learn-credits__block:last-child {
+  margin-bottom: 0;
+}
+
+.learn-credits__name {
+  font-family: var(--font-soul);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.learn-credits__role {
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-left: 0.4em;
+}
+
+.learn-credits__role cite {
+  font-style: italic;
+}
+
+.learn-credits__body {
+  font-family: var(--font-soul);
+  font-weight: 400;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: var(--line-height-body);
+  color: var(--text-primary);
+}
+
+.learn-credits__highlight {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent-home);
+}
+
+/* ── Page Footer ── */
+
+.learn-footer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: clamp(3rem, 6vh, 5rem) var(--margin-golden);
+  border-top: var(--whisper-width) solid var(--whisper-color);
+}
+
+.learn-footer__link {
+  font-family: var(--font-soul);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.3vw, 1.125rem);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-hover) var(--ease-museum);
+}
+
+.learn-footer__link:hover {
+  color: var(--text-primary);
+}
+
+.learn-footer__link--accent {
+  color: var(--accent-home);
+}
+
+.learn-footer__link--accent:hover {
+  color: var(--text-primary);
+}
+
+/* ── Responsive: Mobile adjustments ── */
+
+@media (max-width: 768px) {
+  .learn-section {
+    padding-left: max(24px, 6vw);
+    padding-right: max(24px, 6vw);
+  }
+
+  .learn-whisper {
+    margin-left: max(24px, 6vw);
+    margin-right: max(24px, 6vw);
+  }
+
+  .vg-orientation__label--edge {
+    right: 0;
+    top: auto;
+    bottom: -1.5rem;
+    transform: none;
+    text-align: right;
+  }
+
+  .learn-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .learn-credits__name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .learn-credits__role {
+    margin-left: 0;
+  }
+}
+
+/* ── Reduced Motion ── */
+
+@media (prefers-reduced-motion: reduce) {
+  .learn-footer__link {
+    transition: none;
+  }
+}

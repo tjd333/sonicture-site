@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Source sonicture PNGs (optimized copies live in public/)
 content/gallery/*/sonicture.png
+
+# Full-size reference copy in crops (21MB duplicate; optimized versions in public/learn/)
+content/gallery/studying/crops/00-reference-full.png
