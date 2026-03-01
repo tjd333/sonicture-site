@@ -141,7 +141,7 @@
 }
 
 .site-nav__logo:hover {
-  color: var(--text-secondary);
+  color: var(--accent-home);
 }
 
 .site-nav__links {

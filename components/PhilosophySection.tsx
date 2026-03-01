@@ -24,7 +24,7 @@ export function PhilosophySection() {
           <p className="step-body">
             Every pitch class maps to a specific color coordinate on the Circle
             of Fifths. C is warm coral. G is amber. D is gold-green. These
-            assignments are not aesthetic choices &mdash; they are fixed points
+            assignments are not aesthetic choices. They are fixed points
             in a perceptually uniform color space, derived from the OKLCH model.
           </p>
         </div>
@@ -56,7 +56,7 @@ export function PhilosophySection() {
             A white filament traces the human voice through the instrumental
             architecture. Where the singer enters, the silk thread appears.
             Where they rest, it vanishes. Vocal pitch bends the thread
-            vertically &mdash; high notes rise, low notes fall &mdash; mapping
+            vertically: high notes rise, low notes fall, mapping
             the melody onto the geometry of the sonicture.
           </p>
         </div>

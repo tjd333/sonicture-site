@@ -175,7 +175,7 @@ export default function LearnPage() {
             Look closer at any of these images. The faint text woven into
             the rings is the song&rsquo;s lyrics, positioned at the exact
             moment each word is sung. At normal viewing distance they read
-            as texture. At this scale, they become legible &mdash; another
+            as texture. At this scale, they become legible, another
             layer of the music preserved in its visual form.
           </p>
         </div>

@@ -6,7 +6,7 @@ export function HeroTagline() {
         We have simply lacked the system to render it.
       </p>
       <p className="hero-tagline-line">
-        Sonicture is the computational manifestation of musical DNA — a unique
+        Sonicture is the computational manifestation of musical DNA, a unique
         visual fingerprint for every song.
       </p>
     </div>
