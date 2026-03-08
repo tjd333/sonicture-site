@@ -3,7 +3,7 @@ import { Nav } from "@/components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sonicture \u2014 See Music",
+  title: "Sonicture | See Music",
   description:
     "A unique visual fingerprint for every song. Sonicture transforms music into visual structure through computational analysis and the OKLCH color space.",
 };

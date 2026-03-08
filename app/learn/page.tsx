@@ -8,7 +8,7 @@ import { DetailCropImage } from '@/components/learn/DetailCropImage';
 import './learn.css';
 
 export const metadata: Metadata = {
-  title: 'How It Works | Sonicture',
+  title: 'Sonicture | Learn',
   description:
     'Learn to read a sonicture. A visual grammar that maps pitch to color, intensity to thickness, percussion to geometry, and melody to a continuous thread.',
 };
