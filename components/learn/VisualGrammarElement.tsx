@@ -16,6 +16,10 @@ interface VisualGrammarElementProps {
   side: 'left' | 'right';
   /** Aspect ratio for the crop image */
   aspectRatio?: number;
+  /** Available breakpoint widths for this crop. Defaults to [1080]. */
+  widths?: number[];
+  /** Optional extra CSS class */
+  className?: string;
   /** Additional content rendered below the body text (e.g. NotationBridge) */
   children?: React.ReactNode;
 }
@@ -29,6 +33,8 @@ export function VisualGrammarElement({
   annotations = [],
   side,
   aspectRatio,
+  widths,
+  className,
   children,
 }: VisualGrammarElementProps) {
   // Split heading around keyword to render the bold portion
@@ -38,13 +44,14 @@ export function VisualGrammarElement({
   const after = heading.slice(keywordIndex + keyword.length);
 
   return (
-    <div className={`vg-element vg-element--${side}`}>
+    <div className={`vg-element vg-element--${side}${className ? ` ${className}` : ''}`}>
       <div className="vg-element__image">
         <DetailCropImage
           basePath={imageSrc}
           alt={imageAlt}
           annotations={annotations}
           aspectRatio={aspectRatio}
+          widths={widths}
         />
       </div>
       <div className="vg-element__text">

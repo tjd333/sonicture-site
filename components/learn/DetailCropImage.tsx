@@ -17,15 +17,17 @@ interface DetailCropImageProps {
   aspectRatio?: number;
   /** Lazy load by default; set false for above-fold images */
   lazy?: boolean;
+  /** Available breakpoint widths. Only reference files that exist.
+   *  Defaults to [1080]. Pass [1080, 1920, 3840] for full-size source images. */
+  widths?: number[];
 }
 
 /**
- * Responsive <picture> element with AVIF/WebP sources at 3 breakpoints.
+ * Responsive <picture> element with AVIF/WebP sources at available breakpoints.
  * Annotations render as positioned HTML spans over the image.
  *
- * Expects files at:
- *   {basePath}-1080w.avif, {basePath}-1920w.avif, {basePath}-3840w.avif
- *   {basePath}-1080w.webp, {basePath}-1920w.webp, {basePath}-3840w.webp
+ * Only references breakpoint files that actually exist (controlled via widths prop).
+ * Full-size .webp is always used as the <img> fallback.
  */
 export function DetailCropImage({
   basePath,
@@ -33,7 +35,11 @@ export function DetailCropImage({
   annotations = [],
   aspectRatio = 1.5,
   lazy = true,
+  widths = [1080],
 }: DetailCropImageProps) {
+  const avifSrcSet = widths.map(w => `${basePath}-${w}w.avif ${w}w`).join(', ');
+  const webpSrcSet = widths.map(w => `${basePath}-${w}w.webp ${w}w`).join(', ');
+
   return (
     <div
       className="detail-crop"
@@ -42,16 +48,16 @@ export function DetailCropImage({
       <picture>
         <source
           type="image/avif"
-          srcSet={`${basePath}-1080w.avif 1080w, ${basePath}-1920w.avif 1920w, ${basePath}-3840w.avif 3840w`}
+          srcSet={avifSrcSet}
           sizes="(max-width: 768px) 90vw, 50vw"
         />
         <source
           type="image/webp"
-          srcSet={`${basePath}-1080w.webp 1080w, ${basePath}-1920w.webp 1920w, ${basePath}-3840w.webp 3840w`}
+          srcSet={webpSrcSet}
           sizes="(max-width: 768px) 90vw, 50vw"
         />
         <img
-          src={`${basePath}-1920w.webp`}
+          src={`${basePath}.webp`}
           alt={alt}
           loading={lazy ? 'lazy' : 'eager'}
           decoding="async"

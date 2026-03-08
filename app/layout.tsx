@@ -3,9 +3,9 @@ import { Nav } from "@/components/Nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sonicture: The Computational Manifestation of Musical DNA",
+  title: "Sonicture \u2014 See Music",
   description:
-    "A unique visual fingerprint for every song. Sonicture renders the latent geometry of music through computational analysis and the OKLCH color space.",
+    "A unique visual fingerprint for every song. Sonicture transforms music into visual structure through computational analysis and the OKLCH color space.",
 };
 
 export default function RootLayout({

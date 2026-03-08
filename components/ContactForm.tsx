@@ -35,10 +35,9 @@ export function ContactForm() {
   if (status === "sent") {
     return (
       <div className="contact-wrapper">
-        <h2 className="contact-heading">Received.</h2>
+        <h2 className="contact-heading">received</h2>
         <p className="contact-body">
-          We&rsquo;ll be in touch to arrange the file transfer and begin
-          processing your Sonicture.
+          we&rsquo;ll be in touch soon to start yours
         </p>
       </div>
     );
@@ -46,51 +45,40 @@ export function ContactForm() {
 
   return (
     <div className="contact-wrapper">
-      <h2 className="contact-heading">Independent artists: see your music.</h2>
+      <h2 className="contact-heading">see your music</h2>
       <p className="contact-body">
-        Submit your track for an Early Edition Sonicture and the full SIP
-        artifact suite. We process each submission personally.
+        we create each sonicture personally, one song at a time
+        <br />
+        leave your email and we&rsquo;ll connect to start yours
       </p>
 
       <form onSubmit={handleSubmit} className="contact-form">
         {/* Honeypot for spam */}
         <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-        <label className="form-label">
-          <span>Name</span>
-          <input type="text" name="name" required className="form-input" />
-        </label>
+        <input
+          type="email"
+          name="email"
+          required
+          className="form-input"
+          placeholder="your email"
+          aria-label="Email address"
+        />
 
-        <label className="form-label">
-          <span>Email</span>
-          <input type="email" name="email" required className="form-input" />
-        </label>
-
-        <label className="form-label">
-          <span>Artist Name</span>
-          <input type="text" name="artist" required className="form-input" />
-        </label>
-
-        <label className="form-label">
-          <span>Track Title</span>
-          <input type="text" name="track" required className="form-input" />
-        </label>
-
-        <label className="form-label">
-          <span>Message (optional)</span>
-          <textarea
-            name="message"
-            rows={3}
-            className="form-input form-textarea"
-          />
-        </label>
+        <textarea
+          name="message"
+          rows={3}
+          className="form-input form-textarea form-input--optional"
+          placeholder="anything you'd like us to know (optional)"
+          aria-label="Message (optional)"
+        />
 
         <button
           type="submit"
-          className="form-submit"
+          className="contact-submit"
           disabled={status === "sending"}
         >
-          {status === "sending" ? "Sending..." : "Submit"}
+          {status === "sending" ? "sending..." : "see my music"}
         </button>
 
         {status === "error" && (

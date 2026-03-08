@@ -1,14 +1,9 @@
 export function HeroTagline() {
   return (
     <div className="hero-tagline">
-      <p className="hero-tagline-line">Music has always had a structure.</p>
-      <p className="hero-tagline-line">
-        We have simply lacked the system to render it.
-      </p>
-      <p className="hero-tagline-line">
-        Sonicture is the computational manifestation of musical DNA, a unique
-        visual fingerprint for every song.
-      </p>
+      <p className="hero-headline">see music</p>
+      <p className="hero-tagline-line">its always had structure</p>
+      <p className="hero-tagline-line">now you can see it</p>
     </div>
   );
 }

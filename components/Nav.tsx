@@ -47,7 +47,7 @@ export function Nav() {
       </Link>
       <div className="site-nav__links">
         <Link href="/learn" className="site-nav__link">
-          Learn
+          learn
         </Link>
       </div>
     </nav>

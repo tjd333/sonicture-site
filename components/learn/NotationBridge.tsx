@@ -13,7 +13,7 @@ export function NotationBridge() {
   return (
     <figure className="notation-bridge">
       <svg
-        viewBox="20 30 170 130"
+        viewBox="20 30 170 100"
         xmlns="http://www.w3.org/2000/svg"
         className="notation-bridge__svg"
         role="img"
@@ -68,7 +68,7 @@ export function NotationBridge() {
       </svg>
 
       <figcaption className="notation-bridge__caption">
-        G major chord, colored by sonicture palette
+        G major chord, colored by sonicture's palette
       </figcaption>
     </figure>
   );
